@@ -5,10 +5,13 @@
   --color-white: #fff;
   --color-black: #000;
   --color-dark: #131313;
+  --color-brown: #251801;
+  --color-yellow: #ffcd00;
 
   --color-light-gray: #ccc;
   --color-dark-gray: #333;
   --color-dark-green: #223322;
+  --color-light-brown: #b57700;
 }
 
 * {
@@ -452,4 +455,82 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Emoji Covid Animation */
+.section-covid {
+  background-color: var(--color-brown);
+  cursor: url("./img/covid-cursor/cursor.png"), pointer;
+  flex-wrap: wrap;
+}
+
+.emoji-face:not(:last-child) {
+  margin-right: 128px;
+}
+
+.emoji-face {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: var(--color-yellow);
+  transition: 1s ease;
+}
+
+.emoji-face:hover {
+  background: linear-gradient(180deg, #f44336, #f44336, #ffcd00);
+}
+
+.emoji-face::before {
+  content: "";
+  position: absolute;
+  top: 180px;
+  width: 150px;
+  height: 70px;
+  background: var(--color-light-brown);
+  border-bottom-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+  transition: 0.3s ease-in-out;
+}
+
+.emoji-face:hover::before {
+  top: 210px;
+  width: 150px;
+  height: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #9d0b00;
+}
+
+.emoji-eyes {
+  position: relative;
+  top: -40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.emoji-eyes__eye {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin: 0 16px;
+  background: var(--color-white);
+  border-radius: 50%;
+}
+
+.emoji-eyes__eye::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  background: var(--color-dark);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
 }
