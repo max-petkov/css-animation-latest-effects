@@ -520,10 +520,10 @@
   margin: 0 16px;
   background: var(--color-white);
   border-radius: 50%;
+  overflow: hidden;
 }
 
-.emoji-eyes__eye::before {
-  content: "";
+.emoji-eyes__eye-ball {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -532,5 +532,4 @@
   background: var(--color-dark);
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  overflow: hidden;
 }
