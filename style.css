@@ -430,3 +430,26 @@
     opacity: 0;
   }
 }
+
+/* Smoke Effect */
+.section-smoke {
+  position: relative;
+  background-color: var(--color-black);
+  font-family: "Satisfy", cursive;
+}
+
+.smoke-title {
+  color: var(--color-white);
+  font-size: 128px;
+  z-index: 1;
+  mix-blend-mode: overlay;
+}
+
+.smoke-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
